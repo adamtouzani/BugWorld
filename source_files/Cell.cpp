@@ -2,9 +2,9 @@
  * File:   Cell.cpp
  */
 
-#include "Cell.h"
-#include "Bug.h"
-#include "Exception.h"
+#include "../header_files/Cell.h"
+#include "../header_files/Bug.h"
+#include "../header_files/Exception.h"
 
 using namespace std;
 

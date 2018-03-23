@@ -35,11 +35,21 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/Bug.o \
-	${OBJECTDIR}/Cell.o \
-	${OBJECTDIR}/Marker.o \
-	${OBJECTDIR}/World.o \
-	${OBJECTDIR}/main.o
+	${OBJECTDIR}/source_files/Bug.o \
+	${OBJECTDIR}/source_files/Cell.o \
+	${OBJECTDIR}/source_files/I_direction.o \
+	${OBJECTDIR}/source_files/I_drop.o \
+	${OBJECTDIR}/source_files/I_flip.o \
+	${OBJECTDIR}/source_files/I_mark.o \
+	${OBJECTDIR}/source_files/I_move.o \
+	${OBJECTDIR}/source_files/I_pickup.o \
+	${OBJECTDIR}/source_files/I_sense.o \
+	${OBJECTDIR}/source_files/I_turn.o \
+	${OBJECTDIR}/source_files/I_unmark.o \
+	${OBJECTDIR}/source_files/Instruction.o \
+	${OBJECTDIR}/source_files/Marker.o \
+	${OBJECTDIR}/source_files/Structs.o \
+	${OBJECTDIR}/source_files/World.o
 
 # Test Directory
 TESTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}/tests
@@ -80,30 +90,80 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/bugworld: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/bugworld ${OBJECTFILES} ${LDLIBSOPTIONS}
 
-${OBJECTDIR}/Bug.o: Bug.cpp
-	${MKDIR} -p ${OBJECTDIR}
+${OBJECTDIR}/source_files/Bug.o: source_files/Bug.cpp
+	${MKDIR} -p ${OBJECTDIR}/source_files
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Bug.o Bug.cpp
+	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/source_files/Bug.o source_files/Bug.cpp
 
-${OBJECTDIR}/Cell.o: Cell.cpp
-	${MKDIR} -p ${OBJECTDIR}
+${OBJECTDIR}/source_files/Cell.o: source_files/Cell.cpp
+	${MKDIR} -p ${OBJECTDIR}/source_files
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Cell.o Cell.cpp
+	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/source_files/Cell.o source_files/Cell.cpp
 
-${OBJECTDIR}/Marker.o: Marker.cpp
-	${MKDIR} -p ${OBJECTDIR}
+${OBJECTDIR}/source_files/I_direction.o: source_files/I_direction.cpp
+	${MKDIR} -p ${OBJECTDIR}/source_files
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Marker.o Marker.cpp
+	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/source_files/I_direction.o source_files/I_direction.cpp
 
-${OBJECTDIR}/World.o: World.cpp
-	${MKDIR} -p ${OBJECTDIR}
+${OBJECTDIR}/source_files/I_drop.o: source_files/I_drop.cpp
+	${MKDIR} -p ${OBJECTDIR}/source_files
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/World.o World.cpp
+	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/source_files/I_drop.o source_files/I_drop.cpp
 
-${OBJECTDIR}/main.o: main.cpp
-	${MKDIR} -p ${OBJECTDIR}
+${OBJECTDIR}/source_files/I_flip.o: source_files/I_flip.cpp
+	${MKDIR} -p ${OBJECTDIR}/source_files
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
+	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/source_files/I_flip.o source_files/I_flip.cpp
+
+${OBJECTDIR}/source_files/I_mark.o: source_files/I_mark.cpp
+	${MKDIR} -p ${OBJECTDIR}/source_files
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/source_files/I_mark.o source_files/I_mark.cpp
+
+${OBJECTDIR}/source_files/I_move.o: source_files/I_move.cpp
+	${MKDIR} -p ${OBJECTDIR}/source_files
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/source_files/I_move.o source_files/I_move.cpp
+
+${OBJECTDIR}/source_files/I_pickup.o: source_files/I_pickup.cpp
+	${MKDIR} -p ${OBJECTDIR}/source_files
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/source_files/I_pickup.o source_files/I_pickup.cpp
+
+${OBJECTDIR}/source_files/I_sense.o: source_files/I_sense.cpp
+	${MKDIR} -p ${OBJECTDIR}/source_files
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/source_files/I_sense.o source_files/I_sense.cpp
+
+${OBJECTDIR}/source_files/I_turn.o: source_files/I_turn.cpp
+	${MKDIR} -p ${OBJECTDIR}/source_files
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/source_files/I_turn.o source_files/I_turn.cpp
+
+${OBJECTDIR}/source_files/I_unmark.o: source_files/I_unmark.cpp
+	${MKDIR} -p ${OBJECTDIR}/source_files
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/source_files/I_unmark.o source_files/I_unmark.cpp
+
+${OBJECTDIR}/source_files/Instruction.o: source_files/Instruction.cpp
+	${MKDIR} -p ${OBJECTDIR}/source_files
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/source_files/Instruction.o source_files/Instruction.cpp
+
+${OBJECTDIR}/source_files/Marker.o: source_files/Marker.cpp
+	${MKDIR} -p ${OBJECTDIR}/source_files
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/source_files/Marker.o source_files/Marker.cpp
+
+${OBJECTDIR}/source_files/Structs.o: source_files/Structs.cpp
+	${MKDIR} -p ${OBJECTDIR}/source_files
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/source_files/Structs.o source_files/Structs.cpp
+
+${OBJECTDIR}/source_files/World.o: source_files/World.cpp
+	${MKDIR} -p ${OBJECTDIR}/source_files
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/source_files/World.o source_files/World.cpp
 
 # Subprojects
 .build-subprojects:
@@ -145,69 +205,199 @@ ${TESTDIR}/tests/WorldTestRunner.o: tests/WorldTestRunner.cpp
 	$(COMPILE.cc) -g -std=c++11 `cppunit-config --cflags` -MMD -MP -MF "$@.d" -o ${TESTDIR}/tests/WorldTestRunner.o tests/WorldTestRunner.cpp
 
 
-${OBJECTDIR}/Bug_nomain.o: ${OBJECTDIR}/Bug.o Bug.cpp 
-	${MKDIR} -p ${OBJECTDIR}
-	@NMOUTPUT=`${NM} ${OBJECTDIR}/Bug.o`; \
+${OBJECTDIR}/source_files/Bug_nomain.o: ${OBJECTDIR}/source_files/Bug.o source_files/Bug.cpp 
+	${MKDIR} -p ${OBJECTDIR}/source_files
+	@NMOUTPUT=`${NM} ${OBJECTDIR}/source_files/Bug.o`; \
 	if (echo "$$NMOUTPUT" | ${GREP} '|main$$') || \
 	   (echo "$$NMOUTPUT" | ${GREP} 'T main$$') || \
 	   (echo "$$NMOUTPUT" | ${GREP} 'T _main$$'); \
 	then  \
 	    ${RM} "$@.d";\
-	    $(COMPILE.cc) -g -std=c++11 -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Bug_nomain.o Bug.cpp;\
+	    $(COMPILE.cc) -g -std=c++11 -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/source_files/Bug_nomain.o source_files/Bug.cpp;\
 	else  \
-	    ${CP} ${OBJECTDIR}/Bug.o ${OBJECTDIR}/Bug_nomain.o;\
+	    ${CP} ${OBJECTDIR}/source_files/Bug.o ${OBJECTDIR}/source_files/Bug_nomain.o;\
 	fi
 
-${OBJECTDIR}/Cell_nomain.o: ${OBJECTDIR}/Cell.o Cell.cpp 
-	${MKDIR} -p ${OBJECTDIR}
-	@NMOUTPUT=`${NM} ${OBJECTDIR}/Cell.o`; \
+${OBJECTDIR}/source_files/Cell_nomain.o: ${OBJECTDIR}/source_files/Cell.o source_files/Cell.cpp 
+	${MKDIR} -p ${OBJECTDIR}/source_files
+	@NMOUTPUT=`${NM} ${OBJECTDIR}/source_files/Cell.o`; \
 	if (echo "$$NMOUTPUT" | ${GREP} '|main$$') || \
 	   (echo "$$NMOUTPUT" | ${GREP} 'T main$$') || \
 	   (echo "$$NMOUTPUT" | ${GREP} 'T _main$$'); \
 	then  \
 	    ${RM} "$@.d";\
-	    $(COMPILE.cc) -g -std=c++11 -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Cell_nomain.o Cell.cpp;\
+	    $(COMPILE.cc) -g -std=c++11 -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/source_files/Cell_nomain.o source_files/Cell.cpp;\
 	else  \
-	    ${CP} ${OBJECTDIR}/Cell.o ${OBJECTDIR}/Cell_nomain.o;\
+	    ${CP} ${OBJECTDIR}/source_files/Cell.o ${OBJECTDIR}/source_files/Cell_nomain.o;\
 	fi
 
-${OBJECTDIR}/Marker_nomain.o: ${OBJECTDIR}/Marker.o Marker.cpp 
-	${MKDIR} -p ${OBJECTDIR}
-	@NMOUTPUT=`${NM} ${OBJECTDIR}/Marker.o`; \
+${OBJECTDIR}/source_files/I_direction_nomain.o: ${OBJECTDIR}/source_files/I_direction.o source_files/I_direction.cpp 
+	${MKDIR} -p ${OBJECTDIR}/source_files
+	@NMOUTPUT=`${NM} ${OBJECTDIR}/source_files/I_direction.o`; \
 	if (echo "$$NMOUTPUT" | ${GREP} '|main$$') || \
 	   (echo "$$NMOUTPUT" | ${GREP} 'T main$$') || \
 	   (echo "$$NMOUTPUT" | ${GREP} 'T _main$$'); \
 	then  \
 	    ${RM} "$@.d";\
-	    $(COMPILE.cc) -g -std=c++11 -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Marker_nomain.o Marker.cpp;\
+	    $(COMPILE.cc) -g -std=c++11 -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/source_files/I_direction_nomain.o source_files/I_direction.cpp;\
 	else  \
-	    ${CP} ${OBJECTDIR}/Marker.o ${OBJECTDIR}/Marker_nomain.o;\
+	    ${CP} ${OBJECTDIR}/source_files/I_direction.o ${OBJECTDIR}/source_files/I_direction_nomain.o;\
 	fi
 
-${OBJECTDIR}/World_nomain.o: ${OBJECTDIR}/World.o World.cpp 
-	${MKDIR} -p ${OBJECTDIR}
-	@NMOUTPUT=`${NM} ${OBJECTDIR}/World.o`; \
+${OBJECTDIR}/source_files/I_drop_nomain.o: ${OBJECTDIR}/source_files/I_drop.o source_files/I_drop.cpp 
+	${MKDIR} -p ${OBJECTDIR}/source_files
+	@NMOUTPUT=`${NM} ${OBJECTDIR}/source_files/I_drop.o`; \
 	if (echo "$$NMOUTPUT" | ${GREP} '|main$$') || \
 	   (echo "$$NMOUTPUT" | ${GREP} 'T main$$') || \
 	   (echo "$$NMOUTPUT" | ${GREP} 'T _main$$'); \
 	then  \
 	    ${RM} "$@.d";\
-	    $(COMPILE.cc) -g -std=c++11 -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/World_nomain.o World.cpp;\
+	    $(COMPILE.cc) -g -std=c++11 -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/source_files/I_drop_nomain.o source_files/I_drop.cpp;\
 	else  \
-	    ${CP} ${OBJECTDIR}/World.o ${OBJECTDIR}/World_nomain.o;\
+	    ${CP} ${OBJECTDIR}/source_files/I_drop.o ${OBJECTDIR}/source_files/I_drop_nomain.o;\
 	fi
 
-${OBJECTDIR}/main_nomain.o: ${OBJECTDIR}/main.o main.cpp 
-	${MKDIR} -p ${OBJECTDIR}
-	@NMOUTPUT=`${NM} ${OBJECTDIR}/main.o`; \
+${OBJECTDIR}/source_files/I_flip_nomain.o: ${OBJECTDIR}/source_files/I_flip.o source_files/I_flip.cpp 
+	${MKDIR} -p ${OBJECTDIR}/source_files
+	@NMOUTPUT=`${NM} ${OBJECTDIR}/source_files/I_flip.o`; \
 	if (echo "$$NMOUTPUT" | ${GREP} '|main$$') || \
 	   (echo "$$NMOUTPUT" | ${GREP} 'T main$$') || \
 	   (echo "$$NMOUTPUT" | ${GREP} 'T _main$$'); \
 	then  \
 	    ${RM} "$@.d";\
-	    $(COMPILE.cc) -g -std=c++11 -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main_nomain.o main.cpp;\
+	    $(COMPILE.cc) -g -std=c++11 -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/source_files/I_flip_nomain.o source_files/I_flip.cpp;\
 	else  \
-	    ${CP} ${OBJECTDIR}/main.o ${OBJECTDIR}/main_nomain.o;\
+	    ${CP} ${OBJECTDIR}/source_files/I_flip.o ${OBJECTDIR}/source_files/I_flip_nomain.o;\
+	fi
+
+${OBJECTDIR}/source_files/I_mark_nomain.o: ${OBJECTDIR}/source_files/I_mark.o source_files/I_mark.cpp 
+	${MKDIR} -p ${OBJECTDIR}/source_files
+	@NMOUTPUT=`${NM} ${OBJECTDIR}/source_files/I_mark.o`; \
+	if (echo "$$NMOUTPUT" | ${GREP} '|main$$') || \
+	   (echo "$$NMOUTPUT" | ${GREP} 'T main$$') || \
+	   (echo "$$NMOUTPUT" | ${GREP} 'T _main$$'); \
+	then  \
+	    ${RM} "$@.d";\
+	    $(COMPILE.cc) -g -std=c++11 -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/source_files/I_mark_nomain.o source_files/I_mark.cpp;\
+	else  \
+	    ${CP} ${OBJECTDIR}/source_files/I_mark.o ${OBJECTDIR}/source_files/I_mark_nomain.o;\
+	fi
+
+${OBJECTDIR}/source_files/I_move_nomain.o: ${OBJECTDIR}/source_files/I_move.o source_files/I_move.cpp 
+	${MKDIR} -p ${OBJECTDIR}/source_files
+	@NMOUTPUT=`${NM} ${OBJECTDIR}/source_files/I_move.o`; \
+	if (echo "$$NMOUTPUT" | ${GREP} '|main$$') || \
+	   (echo "$$NMOUTPUT" | ${GREP} 'T main$$') || \
+	   (echo "$$NMOUTPUT" | ${GREP} 'T _main$$'); \
+	then  \
+	    ${RM} "$@.d";\
+	    $(COMPILE.cc) -g -std=c++11 -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/source_files/I_move_nomain.o source_files/I_move.cpp;\
+	else  \
+	    ${CP} ${OBJECTDIR}/source_files/I_move.o ${OBJECTDIR}/source_files/I_move_nomain.o;\
+	fi
+
+${OBJECTDIR}/source_files/I_pickup_nomain.o: ${OBJECTDIR}/source_files/I_pickup.o source_files/I_pickup.cpp 
+	${MKDIR} -p ${OBJECTDIR}/source_files
+	@NMOUTPUT=`${NM} ${OBJECTDIR}/source_files/I_pickup.o`; \
+	if (echo "$$NMOUTPUT" | ${GREP} '|main$$') || \
+	   (echo "$$NMOUTPUT" | ${GREP} 'T main$$') || \
+	   (echo "$$NMOUTPUT" | ${GREP} 'T _main$$'); \
+	then  \
+	    ${RM} "$@.d";\
+	    $(COMPILE.cc) -g -std=c++11 -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/source_files/I_pickup_nomain.o source_files/I_pickup.cpp;\
+	else  \
+	    ${CP} ${OBJECTDIR}/source_files/I_pickup.o ${OBJECTDIR}/source_files/I_pickup_nomain.o;\
+	fi
+
+${OBJECTDIR}/source_files/I_sense_nomain.o: ${OBJECTDIR}/source_files/I_sense.o source_files/I_sense.cpp 
+	${MKDIR} -p ${OBJECTDIR}/source_files
+	@NMOUTPUT=`${NM} ${OBJECTDIR}/source_files/I_sense.o`; \
+	if (echo "$$NMOUTPUT" | ${GREP} '|main$$') || \
+	   (echo "$$NMOUTPUT" | ${GREP} 'T main$$') || \
+	   (echo "$$NMOUTPUT" | ${GREP} 'T _main$$'); \
+	then  \
+	    ${RM} "$@.d";\
+	    $(COMPILE.cc) -g -std=c++11 -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/source_files/I_sense_nomain.o source_files/I_sense.cpp;\
+	else  \
+	    ${CP} ${OBJECTDIR}/source_files/I_sense.o ${OBJECTDIR}/source_files/I_sense_nomain.o;\
+	fi
+
+${OBJECTDIR}/source_files/I_turn_nomain.o: ${OBJECTDIR}/source_files/I_turn.o source_files/I_turn.cpp 
+	${MKDIR} -p ${OBJECTDIR}/source_files
+	@NMOUTPUT=`${NM} ${OBJECTDIR}/source_files/I_turn.o`; \
+	if (echo "$$NMOUTPUT" | ${GREP} '|main$$') || \
+	   (echo "$$NMOUTPUT" | ${GREP} 'T main$$') || \
+	   (echo "$$NMOUTPUT" | ${GREP} 'T _main$$'); \
+	then  \
+	    ${RM} "$@.d";\
+	    $(COMPILE.cc) -g -std=c++11 -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/source_files/I_turn_nomain.o source_files/I_turn.cpp;\
+	else  \
+	    ${CP} ${OBJECTDIR}/source_files/I_turn.o ${OBJECTDIR}/source_files/I_turn_nomain.o;\
+	fi
+
+${OBJECTDIR}/source_files/I_unmark_nomain.o: ${OBJECTDIR}/source_files/I_unmark.o source_files/I_unmark.cpp 
+	${MKDIR} -p ${OBJECTDIR}/source_files
+	@NMOUTPUT=`${NM} ${OBJECTDIR}/source_files/I_unmark.o`; \
+	if (echo "$$NMOUTPUT" | ${GREP} '|main$$') || \
+	   (echo "$$NMOUTPUT" | ${GREP} 'T main$$') || \
+	   (echo "$$NMOUTPUT" | ${GREP} 'T _main$$'); \
+	then  \
+	    ${RM} "$@.d";\
+	    $(COMPILE.cc) -g -std=c++11 -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/source_files/I_unmark_nomain.o source_files/I_unmark.cpp;\
+	else  \
+	    ${CP} ${OBJECTDIR}/source_files/I_unmark.o ${OBJECTDIR}/source_files/I_unmark_nomain.o;\
+	fi
+
+${OBJECTDIR}/source_files/Instruction_nomain.o: ${OBJECTDIR}/source_files/Instruction.o source_files/Instruction.cpp 
+	${MKDIR} -p ${OBJECTDIR}/source_files
+	@NMOUTPUT=`${NM} ${OBJECTDIR}/source_files/Instruction.o`; \
+	if (echo "$$NMOUTPUT" | ${GREP} '|main$$') || \
+	   (echo "$$NMOUTPUT" | ${GREP} 'T main$$') || \
+	   (echo "$$NMOUTPUT" | ${GREP} 'T _main$$'); \
+	then  \
+	    ${RM} "$@.d";\
+	    $(COMPILE.cc) -g -std=c++11 -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/source_files/Instruction_nomain.o source_files/Instruction.cpp;\
+	else  \
+	    ${CP} ${OBJECTDIR}/source_files/Instruction.o ${OBJECTDIR}/source_files/Instruction_nomain.o;\
+	fi
+
+${OBJECTDIR}/source_files/Marker_nomain.o: ${OBJECTDIR}/source_files/Marker.o source_files/Marker.cpp 
+	${MKDIR} -p ${OBJECTDIR}/source_files
+	@NMOUTPUT=`${NM} ${OBJECTDIR}/source_files/Marker.o`; \
+	if (echo "$$NMOUTPUT" | ${GREP} '|main$$') || \
+	   (echo "$$NMOUTPUT" | ${GREP} 'T main$$') || \
+	   (echo "$$NMOUTPUT" | ${GREP} 'T _main$$'); \
+	then  \
+	    ${RM} "$@.d";\
+	    $(COMPILE.cc) -g -std=c++11 -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/source_files/Marker_nomain.o source_files/Marker.cpp;\
+	else  \
+	    ${CP} ${OBJECTDIR}/source_files/Marker.o ${OBJECTDIR}/source_files/Marker_nomain.o;\
+	fi
+
+${OBJECTDIR}/source_files/Structs_nomain.o: ${OBJECTDIR}/source_files/Structs.o source_files/Structs.cpp 
+	${MKDIR} -p ${OBJECTDIR}/source_files
+	@NMOUTPUT=`${NM} ${OBJECTDIR}/source_files/Structs.o`; \
+	if (echo "$$NMOUTPUT" | ${GREP} '|main$$') || \
+	   (echo "$$NMOUTPUT" | ${GREP} 'T main$$') || \
+	   (echo "$$NMOUTPUT" | ${GREP} 'T _main$$'); \
+	then  \
+	    ${RM} "$@.d";\
+	    $(COMPILE.cc) -g -std=c++11 -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/source_files/Structs_nomain.o source_files/Structs.cpp;\
+	else  \
+	    ${CP} ${OBJECTDIR}/source_files/Structs.o ${OBJECTDIR}/source_files/Structs_nomain.o;\
+	fi
+
+${OBJECTDIR}/source_files/World_nomain.o: ${OBJECTDIR}/source_files/World.o source_files/World.cpp 
+	${MKDIR} -p ${OBJECTDIR}/source_files
+	@NMOUTPUT=`${NM} ${OBJECTDIR}/source_files/World.o`; \
+	if (echo "$$NMOUTPUT" | ${GREP} '|main$$') || \
+	   (echo "$$NMOUTPUT" | ${GREP} 'T main$$') || \
+	   (echo "$$NMOUTPUT" | ${GREP} 'T _main$$'); \
+	then  \
+	    ${RM} "$@.d";\
+	    $(COMPILE.cc) -g -std=c++11 -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/source_files/World_nomain.o source_files/World.cpp;\
+	else  \
+	    ${CP} ${OBJECTDIR}/source_files/World.o ${OBJECTDIR}/source_files/World_nomain.o;\
 	fi
 
 # Run Test Targets

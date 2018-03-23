@@ -4,12 +4,23 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <itemPath>Bug.h</itemPath>
-      <itemPath>Cell.h</itemPath>
-      <itemPath>Exception.h</itemPath>
-      <itemPath>Marker.h</itemPath>
-      <itemPath>Structs.h</itemPath>
-      <itemPath>World.h</itemPath>
+      <itemPath>header_files/Bug.h</itemPath>
+      <itemPath>header_files/Cell.h</itemPath>
+      <itemPath>header_files/Exception.h</itemPath>
+      <itemPath>header_files/Instruction.h</itemPath>
+      <itemPath>header_files/Marker.h</itemPath>
+      <itemPath>header_files/Structs.h</itemPath>
+      <itemPath>header_files/World.h</itemPath>
+      <itemPath>header_files/l_default.h</itemPath>
+      <itemPath>header_files/l_direction.h</itemPath>
+      <itemPath>header_files/l_drop.h</itemPath>
+      <itemPath>header_files/l_flip.h</itemPath>
+      <itemPath>header_files/l_mark.h</itemPath>
+      <itemPath>header_files/l_move.h</itemPath>
+      <itemPath>header_files/l_pickup.h</itemPath>
+      <itemPath>header_files/l_sense.h</itemPath>
+      <itemPath>header_files/l_turn.h</itemPath>
+      <itemPath>header_files/l_unmark.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -18,11 +29,21 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>Bug.cpp</itemPath>
-      <itemPath>Cell.cpp</itemPath>
-      <itemPath>Marker.cpp</itemPath>
-      <itemPath>World.cpp</itemPath>
-      <itemPath>main.cpp</itemPath>
+      <itemPath>source_files/Bug.cpp</itemPath>
+      <itemPath>source_files/Cell.cpp</itemPath>
+      <itemPath>source_files/I_direction.cpp</itemPath>
+      <itemPath>source_files/I_drop.cpp</itemPath>
+      <itemPath>source_files/I_flip.cpp</itemPath>
+      <itemPath>source_files/I_mark.cpp</itemPath>
+      <itemPath>source_files/I_move.cpp</itemPath>
+      <itemPath>source_files/I_pickup.cpp</itemPath>
+      <itemPath>source_files/I_sense.cpp</itemPath>
+      <itemPath>source_files/I_turn.cpp</itemPath>
+      <itemPath>source_files/I_unmark.cpp</itemPath>
+      <itemPath>source_files/Instruction.cpp</itemPath>
+      <itemPath>source_files/Marker.cpp</itemPath>
+      <itemPath>source_files/Structs.cpp</itemPath>
+      <itemPath>source_files/World.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
@@ -49,6 +70,9 @@
       <itemPath>Makefile</itemPath>
     </logicalFolder>
   </logicalFolder>
+  <sourceRootList>
+    <Elem>source_files</Elem>
+  </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
     <conf name="Debug" type="1">
@@ -63,26 +87,6 @@
           <commandlineTool>g++</commandlineTool>
         </ccTool>
       </compileType>
-      <item path="Bug.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="Bug.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="Cell.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="Cell.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="Exception.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="Marker.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="Marker.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="Structs.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="World.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="World.h" ex="false" tool="3" flavor2="0">
-      </item>
       <folder path="TestFiles/f1">
         <cTool>
           <commandLine>`cppunit-config --cflags`</commandLine>
@@ -111,7 +115,69 @@
           </linkerLibItems>
         </linkerTool>
       </folder>
-      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      <item path="header_files/Bug.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="header_files/Cell.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="header_files/Exception.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="header_files/Instruction.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="header_files/Marker.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="header_files/Structs.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="header_files/World.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="header_files/l_default.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="header_files/l_direction.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="header_files/l_drop.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="header_files/l_flip.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="header_files/l_mark.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="header_files/l_move.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="header_files/l_pickup.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="header_files/l_sense.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="header_files/l_turn.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="header_files/l_unmark.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source_files/Bug.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="source_files/Cell.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="source_files/I_direction.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="source_files/I_drop.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="source_files/I_flip.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="source_files/I_mark.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="source_files/I_move.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="source_files/I_pickup.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="source_files/I_sense.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="source_files/I_turn.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="source_files/I_unmark.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="source_files/Instruction.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="source_files/Marker.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="source_files/Structs.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="source_files/World.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="tests/CellTest.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -146,26 +212,6 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
-      <item path="Bug.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="Bug.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="Cell.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="Cell.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="Exception.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="Marker.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="Marker.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="Structs.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="World.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="World.h" ex="false" tool="3" flavor2="0">
-      </item>
       <folder path="TestFiles/f1">
         <cTool>
           <commandLine>`cppunit-config --cflags`</commandLine>
@@ -194,7 +240,69 @@
           </linkerLibItems>
         </linkerTool>
       </folder>
-      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      <item path="header_files/Bug.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="header_files/Cell.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="header_files/Exception.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="header_files/Instruction.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="header_files/Marker.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="header_files/Structs.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="header_files/World.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="header_files/l_default.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="header_files/l_direction.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="header_files/l_drop.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="header_files/l_flip.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="header_files/l_mark.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="header_files/l_move.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="header_files/l_pickup.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="header_files/l_sense.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="header_files/l_turn.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="header_files/l_unmark.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source_files/Bug.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="source_files/Cell.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="source_files/I_direction.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="source_files/I_drop.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="source_files/I_flip.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="source_files/I_mark.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="source_files/I_move.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="source_files/I_pickup.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="source_files/I_sense.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="source_files/I_turn.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="source_files/I_unmark.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="source_files/Instruction.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="source_files/Marker.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="source_files/Structs.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="source_files/World.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="tests/CellTest.cpp" ex="false" tool="1" flavor2="0">
       </item>
