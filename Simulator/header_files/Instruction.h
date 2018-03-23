@@ -16,7 +16,7 @@ class Instruction
 
     private:
         int line;
-        Labels l_list;
+        LabelsI_list;
 };
 
 #endif // INSTRUCTION_H

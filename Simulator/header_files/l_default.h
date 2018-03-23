@@ -1,8 +1,3 @@
-/*
-* l_default.h
-* Gisi Musa
-*/
-
 #ifndef I_DEFAULT_H
 #define I_DEFAULT_H
 
@@ -19,4 +14,4 @@ class I_default: public Instruction
 
 };
 
-#endif // L_DEFAULT_H
+#endif // I_DEFAULT_H

@@ -1,11 +1,8 @@
-/*
-* Labels.h
-* Gisi Musa
-*/
-
 #ifndef LABELS_H
 #define LABELS_H
-#include "allHeaders.h"
+
+#include "../header_files/Instruction.h"
+using namespace std;
 
 class Labels
 {
