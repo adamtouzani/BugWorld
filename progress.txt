@@ -3,4 +3,10 @@
 Implemented World.h and World.cpp
 Implemented Cell.h and Cell.cpp
 Preliminary Unit Testing for World.h and World.cpp based on CppUnit
-* Unit testing still requires modifications to run properly * 
+* Unit testing still requires modifications to run properly *
+
+//Phase 2 - Brian Ngugi & Adam Touzani
+
+Implemented Bug.h
+Added Instruction header files
+Added Assembler code
