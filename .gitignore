@@ -2,7 +2,8 @@
 
 Simulator/build
 Simulator/dist
-
+Assembler/build
+Assembler/dist
 
 #Ignore macOS files
 
