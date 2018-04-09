@@ -1,0 +1,14 @@
+//Phase 1 - Adam Touzani & Giorgi Kabanashvili
+
+Implemented World.h and World.cpp
+Implemented Cell.h and Cell.cpp
+Preliminary Unit Testing for World.h and World.cpp based on CppUnit
+* Unit testing still requires modifications to run properly *
+
+//Phase 2 - Brian Ngugi & Adam Touzani
+
+Implemented Bug.h
+Added Instruction header files
+Added Assembler code
+Added Simulator code namely Bug object logic
+TODO: fix compilation issues due to moving of files to different folder
