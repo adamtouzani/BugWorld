@@ -12,3 +12,8 @@ Added Instruction header files
 Added Assembler code
 Added Simulator code namely Bug object logic
 TODO: fix compilation issues due to moving of files to different folder
+
+//Phase 3 - Adam Touzani & Shivam Goraksha
+Started work on Program.cpp (implementation of process())
+Fixed compilation issues related to files moving to different folders
+TODO: finish implementation of process() in Program.Cpp
