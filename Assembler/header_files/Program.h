@@ -1,23 +1,18 @@
-/*
-* Program.h
-* Gisi Musa
-*/
-
 #ifndef PROGRAM_H
 #define PROGRAM_H
-#include "allHeaders.h"
 
 class Program
 {
     public:
-        Program(string filename);
-        void error(string msg);
+        Program(std::string filename);
+        void error(std::string msg);
         void  process();
         void export();
         virtual ~Program();
 
     private:
         int line = 0;
+        ifstream inputFile;
 };
 
 #endif // PROGRAM_H

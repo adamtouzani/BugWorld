@@ -1,9 +1,5 @@
-/*
-* I_sense.cpp
-* Gisi Musa
-*/
-
-#include "allHeaders.h"
+#include "../header_files/Instruction.h"
+#include "../header_files/I_sense.h"
 
 I_sense::I_sense() { }
 I_sense::~I_sense() { }

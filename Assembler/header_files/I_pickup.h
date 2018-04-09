@@ -2,6 +2,7 @@
 #define I_PICKUP_H
 
 #include "../header_files/Instruction.h"
+
 using namespace std;
 
 class I_pickup: public Instruction

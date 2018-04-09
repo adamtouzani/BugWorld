@@ -2,6 +2,7 @@
 #define I_FLIP_H
 
 #include "../header_files/Instruction.h"
+
 using namespace std;
 
 class I_flip: public Instruction

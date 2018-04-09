@@ -1,4 +1,5 @@
-#include "allHeaders.h"
+#include "../header_files/Instruction.h"
+#include "../header_files/I_direction.h"
 
 I_direction::I_direction() { }
 I_direction::~I_direction() { }

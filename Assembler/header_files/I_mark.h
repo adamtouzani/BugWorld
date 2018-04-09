@@ -2,7 +2,8 @@
 #define I_MARK_H
 
 #include "../header_files/Instruction.h"
-using namespace stdI
+
+using namespace std;
 
 class I_mark: public Instruction
 {

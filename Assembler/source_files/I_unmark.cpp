@@ -1,9 +1,5 @@
-/*
-* I_unmark.cpp
-* Gisi Musa
-*/
-
-#include "allHeaders.h"
+#include "../header_files/Instruction.h"
+#include "../header_files/I_unmark.h"
 
 I_unmark::I_unmark() { }
 I_unmark::~I_unmark() { }

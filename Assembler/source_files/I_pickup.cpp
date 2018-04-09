@@ -1,9 +1,5 @@
-/*
-* I_pickup.cpp
-* Gisi Musa
-*/
-
-#include "allHeaders.h"
+#include "../header_files/Instruction.h"
+#include "../header_files/I_pickup.h"
 
 I_pickup::I_pickup() { }
 I_pickup::~I_pickup() { }

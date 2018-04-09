@@ -2,6 +2,7 @@
 #define I_TURN_H
 
 #include "../header_files/Instruction.h"
+
 using namespace std;
 
 class I_turn: public Instruction
