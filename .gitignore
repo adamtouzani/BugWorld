@@ -8,3 +8,4 @@ Assembler/dist
 #Ignore macOS files
 
 .DS_Store
+.dep.inc
