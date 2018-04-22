@@ -1,19 +1,20 @@
-#ifndef I_PICKUP_H
-#define I_PICKUP_H
+#ifndef _I_PICKUP_H
+#define _I_PICKUP_H
 
+#include "../header_files/Bug.h"
+#include "../header_files/Structs.h"
 #include "../header_files/Instruction.h"
+
 using namespace std;
 
-class I_pickup: public Instruction
-{
-    public:
-        I_pickup();
-        int parse(string args, int line);
-        string read();
-        virtual ~I_pickup();
-
-    private:
-        string on_fail;
+class I_pickup: public Instruction{
+private:
+  tstate x;
+  tstate y;
+public:
+  void execute(Bug b);
+  void parse(std::string args);
+  void pickup(tstate x, tstate y);
 };
 
-#endif // I_PICKUP_H
+#endif

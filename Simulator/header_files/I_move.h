@@ -1,19 +1,20 @@
-#ifndef I_MOVE_H
-#define I_MOVE_H
+#ifndef _I_MOVE_H
+#define _I_MOVE_H
 
+#include "../header_files/Bug.h"
+#include "../header_files/Structs.h"
 #include "../header_files/Instruction.h"
+
 using namespace std;
 
-class I_move: public Instruction
-{
-    public:
-        I_move();
-        int parse(string args, int line);
-        string read();
-        virtual ~I_move();
-
-    private:
-        string on_fail;
+class I_move: public Instruction{
+private:
+  tstate x;
+  tstate y;
+public:
+  void execute(Bug b);
+  void parse(string args);
+  void move(tstate x, tstate y);
 };
 
-#endif // I_MOVE_H
+#endif

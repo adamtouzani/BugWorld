@@ -1,5 +1,3 @@
-
-
 #ifndef INSTRUCTION_H
 #define INSTRUCTION_H
 
@@ -9,14 +7,12 @@ class Instruction
 {
     public:
         Instruction();
-        virtual int parse(string args, int line) = 0;
-        void error(string msg);
-        virtual string read() = 0;
+        virtual void parse(string, int);
+        virtual void execute(Bug);
         virtual ~Instruction();
 
     private:
-        int line;
-        LabelsI_list;
+        World w;
 };
 
 #endif // INSTRUCTION_H

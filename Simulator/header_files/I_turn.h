@@ -1,19 +1,31 @@
-#ifndef I_TURN_H
-#define I_TURN_H
+/**
+I_turn.h
+*/
 
+#ifndef _I_TURN_H
+#define _I_TURN_H
+
+#include "../header_files/Bug.h"
+#include "../header_files/Structs.h"
 #include "../header_files/Instruction.h"
+
 using namespace std;
 
-class I_turn: public Instruction
-{
-    public:
-       I_turn();
-        int parse(string args, int line);
-        string read();
-        virtual ~I_turn();
+class I_turn: public Instruction{
+  private:
+    // attributes
+    tleftright lr;
+    tstate z;
 
-    private:
-        tleftright lr;
+    //functions
+
+  public:
+    //attributes
+
+    //functions
+    void execute(Bug b);
+    void parse(string args);
+    void turn(tleftright lr, tstate z);
 };
 
-#endif //I_TURN_H
+#endif

@@ -9,13 +9,15 @@
 #include <vector>
 #include <cstring>
 
-#include "I_direction.h"
-#include "Bug.h"
+#include "../header_files/Bug.h"
+#include "../header_files/World.h"
+#include "../header_files/Structs.h"
+#include "../header_files/I_headers.h"
 
 void I_direction::execute(Bug& b) {
     if(b.get_direction().val == this->d.val)
         b.set_state(this->x);
-    else 
+    else
         b.set_state(this->y);
 }
 

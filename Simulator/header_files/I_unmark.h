@@ -1,9 +1,13 @@
-#ifndef I_MARK_H
-#define I_MARK_H
+/**
+I_unmark.h
+*/
 
-#include "../header_files/Instruction.h"
+#ifndef _I_UNMARK_H
+#define _I_UNMARK_H
+
 #include "../header_files/Bug.h"
 #include "../header_files/Structs.h"
+#include "../header_files/Instruction.h"
 
 using namespace std;
 
@@ -24,4 +28,4 @@ class I_unmark: public Instruction{
     void unmark(int m, tsate z);
 };
 
-#endif // I_MARK_H
+#endif

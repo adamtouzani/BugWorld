@@ -2,9 +2,13 @@
 #include <exception>
 #include <vector>
 #include <cstring>
-#include "attribute.h"
-#include "I_mark.h"
-#include "World.h"
+
+#include "../header_files/Bug.h"
+#include "../header_files/World.h"
+#include "../header_files/Structs.h"
+#include "../header_files/I_headers.h"
+
+using namespace std;
 
 void I_mark::execute(Bug& b){
     //set mark m and go to state z
@@ -13,7 +17,7 @@ void I_mark::execute(Bug& b){
 
     tmark new_mark;
     new_mark.val = m;
-    
+
     x->mark.set_marker(new_mark, b.get_color());
     b.set_state(z);
 }

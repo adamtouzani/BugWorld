@@ -6,7 +6,7 @@
 
 #include <cstdlib>
 #include <iostream>
-#include <allClasses.h>
+#include "../header_files/I_headers.h"
 
 
 using namespace std;

@@ -3,9 +3,12 @@
 #include <exception>
 #include <vector>
 #include <cstring>
-#include "I_drop.h"
-#include "World.h"
-#include "Bug.h"
+
+#include "../header_files/Bug.h"
+#include "../header_files/Structs.h"
+#include "../header_files/I_headers.h"
+
+using namespace std;
 
 void I_drop::execute(Bug& b){
     tposition p = b.get_position();
@@ -26,7 +29,7 @@ void I_drop::parse(std::string& args){
         v.push_back(str);
         token= strtok (NULL, " ,.-");
     }
-	
+
     this->z.val = std::stoi (v[0],nullptr,10);
-    
+
 }
