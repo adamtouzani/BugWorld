@@ -21,7 +21,7 @@ void I_pickup::execute(Bug *b){
     } else {
       temp->setFood(food-1);
       b->set_food(true);
-      b->set_state(x);
+      b->set_state(this->x);
     }
   }
   return;
