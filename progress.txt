@@ -17,3 +17,10 @@ TODO: fix compilation issues due to moving of files to different folder
 Started work on Program.cpp (implementation of process())
 Fixed compilation issues related to files moving to different folders
 TODO: finish implementation of process() in Program.Cpp
+
+//Phase 4 - Adam Touzani & Sahil Mehta
+Finished implementation of I_* classes for Simulator
+Finished implementation of Program process() for Simulator
+Various bug fixes across the board
+TODO: finalize I_* classes for Assembler, finish Program for Assembler
+TODO: finish bug fixes to allow proper compilation
