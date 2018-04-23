@@ -11,6 +11,8 @@
 
 using namespace std;
 
+I_flip::I_flip(World *w) : Instruction(w){}
+
 void I_flip::execute(Bug& b) {
     int randomI =randomint();
     if(randomI == 0)

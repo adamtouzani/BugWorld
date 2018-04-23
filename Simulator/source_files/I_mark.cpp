@@ -10,6 +10,8 @@
 
 using namespace std;
 
+I_mark::I_mark(World *w) : Instruction(w){}
+
 void I_mark::execute(Bug& b){
     //set mark m and go to state z
     tposition p = b.get_position();

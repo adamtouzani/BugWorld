@@ -14,6 +14,8 @@
 #include "../header_files/Structs.h"
 #include "../header_files/I_headers.h"
 
+I_direction::I_direction(World *w) : Instruction(w){}
+
 void I_direction::execute(Bug& b) {
     if(b.get_direction().val == this->d.val)
         b.set_state(this->x);

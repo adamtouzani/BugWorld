@@ -10,6 +10,8 @@
 
 using namespace std;
 
+I_pickup::I_pickup(World *w) : Instruction(w){}
+
 void I_drop::execute(Bug& b){
     tposition p = b.get_position();
     Cell *x = this->w.get_cell(p);

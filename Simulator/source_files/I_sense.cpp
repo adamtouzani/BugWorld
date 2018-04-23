@@ -9,6 +9,8 @@
 
 using namespace std;
 
+I_sense::I_sense(World *w) : Instruction(w){}
+
 void I_sense::execute(Bug b){
 
 };
