@@ -124,8 +124,8 @@ int World::redFood(){
     int count = 0;
     for(int x = 0; x < width; x++){
         for(int y = 0; y < height; y++){
-            if(worldCells[x][y].isRedHomeArea())
-                count += worldCells[x][y].getFood();
+            if(worldCells[x][y]->isRedHomeArea())
+                count += worldCells[x][y]->getFood();
         }
     }
     return count;
@@ -135,8 +135,8 @@ int World::blackFood(){
     int count = 0;
     for(int x = 0; x < width; x++){
         for(int y = 0; y < height; y++){
-            if(worldCells[x][y].isBlackHomeArea())
-                count += worldCells[x][y].getFood();
+            if(worldCells[x][y]->isBlackHomeArea())
+                count += worldCells[x][y]->getFood();
         }
     }
     return count;

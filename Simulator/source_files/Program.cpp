@@ -12,7 +12,7 @@ using namespace std;
 
 enum instruction_values{ sense = 0, mark, unmark, pickup, drop, turn, move_index, flip, direction };
 
-Program::Program(string filename){
+Program::Program(string filename, World* w){
   ifstream inputfile;
   inputfile.open(filename);
   if (!inputfile.is_open()){
@@ -35,7 +35,7 @@ Program::Program(string filename){
   std::vector<std::string>::iterator value_itr;
 
   std::vector<std::string>::iterator vec_itr;
-  int index_for_enum;
+  int index_for_enum = 999;
   //iterate over each line in instruction_set
   for (vec_itr = instruction_set.begin() ; vec_itr != instruction_set.end(); ++vec_itr){
     //tokenize line found in instruction_set and push to individual_instr
@@ -53,40 +53,40 @@ Program::Program(string filename){
     }
     switch (index_for_enum) {
       case sense:
-            I_sense s;
-            s.parse(individual_instr[1]);
+        {I_sense s(w);
+        s.parse(individual_instr[1]); }
         break;
       case mark:
-            I_mark m;
-            m.parse(individual_instr[1]);
+        { I_mark m(w);
+        m.parse(individual_instr[1]);}
         break;
       case unmark:
-            I_unmark um;
-            um.parse(individual_instr[1]);
+        {I_unmark um(w);
+        um.parse(individual_instr[1]);}
         break;
       case pickup:
-            I_pickup p;
-            p.parse(individual_instr[1]);
+        {I_pickup p(w);
+        p.parse(individual_instr[1]);}
         break;
       case drop:
-            I_drop d;
-            d.parse(individual_instr[1]);
+        {I_drop d(w);
+        d.parse(individual_instr[1]);}
         break;
       case turn:
-            I_turn t;
-            t.parse(individual_instr[1]);
+        {I_turn t(w);
+        t.parse(individual_instr[1]);}
         break;
       case move_index:
-            I_move mo;
-            mo.parse(individual_instr[1]);
+        {I_move mo(w);
+        mo.parse(individual_instr[1]);}
         break;
       case flip:
-            I_flip f;
-            f.parse(individual_instr[1]);
+        {I_flip f(w);
+        f.parse(individual_instr[1]);}
         break;
       case direction:
-            I_direction dir;
-            dir.parse(individual_instr[1]);
+        {I_direction dir(w);
+        dir.parse(individual_instr[1]);}
         break;
       default:
         std::cout << "unkown command" << std::endl;
@@ -97,7 +97,7 @@ Program::Program(string filename){
 
 void Program::step(Bug *b){
   if (!b->is_dead()) {
-    int state = b->get_state().state;
+    //int state = b->get_state().state;
       //TODO: To be implemented
   }
 }

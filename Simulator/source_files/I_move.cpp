@@ -7,9 +7,9 @@ using namespace std;
 I_move::I_move(World *w) : Instruction(w){}
 
 void I_move::execute(Bug *b){
-  tposition pos = w->adjacent(b->get_position(), b->get_direction());
-  Cell *temp = w->getCell(b->get_position());
-  Cell *adj = w->getCell(pos);
+  tposition pos = world->adjacent(b->get_position(), b->get_direction());
+  Cell *temp = world->getCell(b->get_position());
+  Cell *adj = world->getCell(pos);
   if (adj->getOccupant() == NULL && !adj->getObstructed()) {
     temp->setOccupant(NULL);
     adj->setOccupant(b);

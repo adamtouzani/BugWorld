@@ -14,7 +14,7 @@ private:
   tstate y;
 public:
   I_move(World*);
-  void execute(Bug b);
+  void execute(Bug *b);
   void parse(string args);
   void move(tstate x, tstate y);
 };

@@ -13,12 +13,12 @@ using namespace std;
 
 I_flip::I_flip(World *w) : Instruction(w){}
 
-void I_flip::execute(Bug& b) {
+void I_flip::execute(Bug *b) {
     int randomI =randomint();
     if(randomI == 0)
-        b.set_state(x);
+        b->set_state(x);
     else
-        b.set_state(y);
+        b->set_state(y);
 }
 
 void I_flip::parse(std::string args){
@@ -31,7 +31,7 @@ void I_flip::parse(std::string args){
     token = strtok (NULL, " ,.-");
   }
 
-	int p = std::stoi(v[0], nullptr, 10);
-	this->x.val = std::stoi(v[1], nullptr, 10);
-	this->y.val = std::stoi(v[2], nullptr, 10);
+	this->p = std::stoi(v[0], nullptr, 10);
+	this->x.state = std::stoi(v[1], nullptr, 10);
+	this->y.state = std::stoi(v[2], nullptr, 10);
 }

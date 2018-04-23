@@ -20,7 +20,7 @@ class I_mark: public Instruction{
   public:
     //functions
     I_mark(World*);
-    void execute(Bug b);
+    void execute(Bug*);
     void parse(string args);
 };
 

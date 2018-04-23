@@ -10,9 +10,8 @@ class Instruction
 {
     public:
         Instruction(World*);
-        virtual void parse(string, int);
-        virtual void execute(Bug);
-        virtual ~Instruction();
+        virtual void parse(string) = 0;
+        virtual void execute(Bug*) = 0;
 
     protected:
         World *world;

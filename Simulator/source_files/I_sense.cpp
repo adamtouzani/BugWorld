@@ -24,47 +24,47 @@ void I_sense::execute(Bug *b){
       temp = world->getCell(b->get_position());
       break;
     case Ahead:
-      temp = world->getCell(w->adjacent(b->get_position(), dir));
+      temp = world->getCell(world->adjacent(b->get_position(), dir));
       break;
     case LeftAhead:
       dir.direction = (dir.direction + 5) % 6;
-      temp = world->getCell(w->adjacent(b->get_position(), dir));
+      temp = world->getCell(world->adjacent(b->get_position(), dir));
       break;
     case RightAhead:
       dir.direction = (dir.direction + 1) % 6;
-      temp = world->getCell(w->adjacent(b->get_position(), dir));
+      temp = world->getCell(world->adjacent(b->get_position(), dir));
       break;
-    case default:
+    default:
       break;
   }
   switch (this->condition.condition) {
     case Friend:
-      Bug *occupant = temp->getOccupant();
+      {Bug *occupant = temp->getOccupant();
       if (occupant != NULL) {
         confirm = occupant->get_color().color == b->get_color().color;
-      }
+      }}
       break;
     case Foe:
-      Bug *occupant = temp->getOccupant();
+      {Bug *occupant = temp->getOccupant();
       if (occupant != NULL) {
         confirm = occupant->get_color().color != b->get_color().color;
-      }
+      }}
       break;
     case FriendWithFood:
-      Bug *occupant = temp->getOccupant();
+      {Bug *occupant = temp->getOccupant();
       if (occupant != NULL) {
         if (occupant->get_color().color == b->get_color().color){
           confirm = occupant->get_food();
         }
-      }
+      }}
       break;
     case FoeWithFood:
-      Bug *occupant = temp->getOccupant();
+      {Bug *occupant = temp->getOccupant();
       if (occupant != NULL) {
         if (occupant->get_color().color != b->get_color().color){
           confirm = occupant->get_food();
         }
-      }
+      }}
       break;
     case Food:
       confirm = (temp->getFood() > 0);
@@ -79,18 +79,18 @@ void I_sense::execute(Bug *b){
       confirm = temp->mark->check_other_marker(b->get_color().color);
       break;
     case Home:
-      int bug_color = b->get_color().color;
+      {int bug_color = b->get_color().color;
       if (bug_color) {
         confirm = temp->isBlackHomeArea();
-      }
+      }}
       break;
     case FoeHome:
-      int bug_color = b->get_color().color;
+      {int bug_color = b->get_color().color;
       if (bug_color) {
         confirm = temp->isRedHomeArea();
-      }
+      }}
       break;
-    case default:
+    default:
       confirm = false;
       break;
   }

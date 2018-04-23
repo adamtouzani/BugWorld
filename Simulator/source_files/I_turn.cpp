@@ -11,15 +11,15 @@ using namespace std;
 
 I_turn::I_turn(World *w) : Instruction(w){}
 
-void I_turn::execute(Bug b){
-  tdirection dir = b.get_direction();
+void I_turn::execute(Bug *b){
+  tdirection dir = b->get_direction();
   if (lr.leftright == 0) { // 0 = left
     dir.direction = (dir.direction + 5) % 6;
   } else { //1 = right
     dir.direction = (dir.direction + 1) % 6;
   }
-  b.set_direction(dir);
-  b.set_state(this->z);
+  b->set_direction(dir);
+  b->set_state(this->z);
 };
 
 void I_turn::parse(string args){

@@ -23,7 +23,7 @@ class I_turn: public Instruction{
   public:
     //functions
     I_turn(World*);
-    void execute(Bug b);
+    void execute(Bug *b);
     void parse(string args);
     void turn(tleftright lr, tstate z);
 };
