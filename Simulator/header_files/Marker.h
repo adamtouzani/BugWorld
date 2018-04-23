@@ -13,7 +13,7 @@ public:
   void set_marker(tmark, tcolor);
   void clear_marker(tmark, tcolor);
   bool check_marker(tmark, tcolor);
-  bool check_other_marker(tmark, tcolor);
+  bool check_other_marker(tcolor);
 };
 
 #endif

@@ -11,6 +11,7 @@
 #include "Exception.h"
 #include "Structs.h"
 
+
 class World{
 private:
     //Dimensions of the World
@@ -18,6 +19,7 @@ private:
     int height;
     //All the Cells of the world, in 2D vector
     std::vector< std::vector<Cell> > worldCells;
+
     std::vector<Bug *> redbugs;
     std::vector<Bug *> blackbugs;
 public:
