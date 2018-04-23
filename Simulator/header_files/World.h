@@ -18,7 +18,6 @@ private:
     int height;
     //All the Cells of the world, in 2D vector
     std::vector< std::vector<Cell> > worldCells;
-
     std::vector<Bug *> redbugs;
     std::vector<Bug *> blackbugs;
 public:
