@@ -6,13 +6,13 @@ using namespace std;
 class Instruction
 {
     public:
-        Instruction();
+        Instruction(World*);
         virtual void parse(string, int);
         virtual void execute(Bug);
         virtual ~Instruction();
 
     private:
-        World w;
+        World *w;
 };
 
 #endif // INSTRUCTION_H
