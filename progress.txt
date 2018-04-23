@@ -23,4 +23,4 @@ Finished implementation of I_* classes for Simulator
 Finished implementation of Program process() for Simulator
 Various bug fixes across the board
 TODO: finalize I_* classes for Assembler, finish Program for Assembler
-TODO: fix Makefile for Simulator
+TODO: add Makefile for Assembler
