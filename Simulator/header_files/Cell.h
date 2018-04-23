@@ -14,7 +14,6 @@ private:
     Bug *occupant;
     bool obstructed;
     int food;
-    Marker *mark;
     bool homeBlackBug;
     bool homeRedBug;
 public:
@@ -28,6 +27,7 @@ public:
     bool getObstructed();
     bool isBlackHomeArea();
     bool isRedHomeArea();
+    Marker *mark;
 };
 
 #endif /* CELL_H */

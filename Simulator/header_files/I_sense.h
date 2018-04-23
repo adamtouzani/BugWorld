@@ -15,6 +15,7 @@ private:
   tstate x;
   tstate y;
   tcondition condition;
+  int mark_int;
 public:
   I_sense(World*);
   void execute(Bug b);
