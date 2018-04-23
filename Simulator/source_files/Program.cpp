@@ -93,6 +93,9 @@ Program Program::Program(string filename){
 
 void Program::step(Bug b){
   if (!b.is_dead()) {
-    
+    int state = b->get_state().state;
+    if(state > ){
+      
+    }
   }
 }

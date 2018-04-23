@@ -8,13 +8,27 @@
 #include "../header_files/Structs.h"
 #include "../header_files/I_headers.h"
 
-
 using namespace std;
 
-void I_pickup::execute(Bug b){
+I_pickup::I_pickup(World *w) : Instruction(w){}
 
+void I_pickup::execute(Bug b){
+  if (!b.get_food()) {
+    Cell temp =
+  }
+  return;
 };
 
 void I_pickup::parse(string args){
+  std::vector<std::string> v;
+  char* token;
 
+  token = strtok ((char*) args.c_str()," ,.-");
+  while (token!= NULL){
+      std::string str(token);
+      v.push_back(str);
+      token= strtok (NULL, " ,.-");
+  }
+  this->x.state = std::stoi (v[0], nullptr, 10);
+  this->y.state = std::stoi (v[1], nullptr, 10);
 };

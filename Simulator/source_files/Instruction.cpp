@@ -6,14 +6,12 @@
 #include "../header_files/Structs.h"
 #include "../header_files/I_headers.h"
 
-
 using namespace std;
 
+Instruction::Instruction(World *w){
+  wrld = w;
+}
 
-virtual void Instruction::execute(Bug b){
+virtual void Instruction::execute(Bug b){};
 
-};
-
-virtual void Instruction::parse(string args){
-
-};
+virtual void Instruction::parse(string args){};
