@@ -20,4 +20,3 @@ public:
 };
 
 #endif /* EXCEPTION_H */
-

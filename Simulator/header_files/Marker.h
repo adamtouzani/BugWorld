@@ -1,7 +1,7 @@
 #ifndef _MARKER_H
 #define _MARKER_H
 
-#include "../header_files/Structs.h"
+#include "Structs.h"
 
 class Marker{
 private:
@@ -9,7 +9,7 @@ private:
 public:
   Marker();
   ~Marker();
-  
+
   void set_marker(tmark, tcolor);
   void clear_marker(tmark, tcolor);
   bool check_marker(tmark, tcolor);

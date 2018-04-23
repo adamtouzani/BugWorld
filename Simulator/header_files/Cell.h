@@ -1,4 +1,4 @@
-/* 
+/*
  * File:   Cell.h
 */
 
@@ -11,18 +11,18 @@
 
 class Cell{
 private:
-    Bug occupant;
+    Bug *occupant;
     bool obstructed;
     int food;
-    Marker mark;
+    Marker *mark;
     bool homeBlackBug;
     bool homeRedBug;
 public:
     Cell();
     Cell(char symb);
     ~Cell();
-    Bug getOccupant();
-    void setOccupant(Bug newBug);
+    Bug* getOccupant();
+    void setOccupant(Bug *newBug);
     int getFood();
     void setFood(int newFood);
     bool getObstructed();
@@ -31,4 +31,3 @@ public:
 };
 
 #endif /* CELL_H */
-

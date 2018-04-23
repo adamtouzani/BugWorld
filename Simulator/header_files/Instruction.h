@@ -1,6 +1,9 @@
 #ifndef INSTRUCTION_H
 #define INSTRUCTION_H
 
+#include "../header_files/World.h"
+
+
 using namespace std;
 
 class Instruction

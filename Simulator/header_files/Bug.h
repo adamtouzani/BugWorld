@@ -5,6 +5,8 @@
 #ifndef BUG_H
 #define BUG_H
 
+#include "Structs.h"
+
 class Bug{
 private:
   tcolor color;
