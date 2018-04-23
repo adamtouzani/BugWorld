@@ -11,10 +11,12 @@
 
 using namespace std;
 
+I_move::I_move(World *w) : Instruction(w){}
+
 void I_move::execute(Bug b){
-    
+
 };
-    
+
 void I_move::parse(string args){
-    
+
 };

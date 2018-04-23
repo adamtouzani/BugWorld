@@ -9,6 +9,8 @@
 
 using namespace std;
 
+I_turn::I_turn(World *w) : Instruction(w){}
+
 void I_turn::execute(Bug b){
   tdirection dir = b.get_direction();
   if (lr.leftright == 0) { // 0 = left
