@@ -64,7 +64,7 @@ Cell::Cell(char symb){
     }
 }
 
-void Cell::setOccupant(Bug newBug){
+void Cell::setOccupant(Bug *newBug){
     occupant = newBug;
 }
 

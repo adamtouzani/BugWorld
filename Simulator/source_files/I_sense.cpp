@@ -9,25 +9,9 @@
 
 using namespace std;
 
-enum conds{
-  Friend = 0;
-  Foe;
-  FriendWithFood;
-  FoeWithFood;
-  Food;
-  Rock;
-  Marker_flag;
-  FoeMarker;
-  Home;
-  FoeHome;
-}
+enum conds{Friend = 0, Foe, FriendWithFood, FoeWithFood, Food, Rock, Marker_flag, FoeMarker, Home, FoeHome};
 
-enum dirs{
-  Here = 0;
-  Ahead;
-  LeftAhead;
-  RightAhead;
-}
+enum dirs{Here = 0, Ahead, LeftAhead, RightAhead};
 
 I_sense::I_sense(World *w) : Instruction(w){}
 
@@ -35,39 +19,39 @@ void I_sense::execute(Bug *b){
   Cell *temp = NULL;
   tdirection dir = b->get_direction();
   bool confirm = false;
-  switch (this->dir.direction) {
+  switch (this->dir.sensedir) {
     case Here:
-      temp = w->getCell(b->get_position());
+      temp = world->getCell(b->get_position());
       break;
     case Ahead:
-      temp = w->getCell(w->adjacent(b->get_position(), dir));
+      temp = world->getCell(w->adjacent(b->get_position(), dir));
       break;
     case LeftAhead:
       dir.direction = (dir.direction + 5) % 6;
-      temp = w->getCell(w->adjacent(b->get_position(), dir));
+      temp = world->getCell(w->adjacent(b->get_position(), dir));
       break;
     case RightAhead:
       dir.direction = (dir.direction + 1) % 6;
-      temp = w->getCell(w->adjacent(b->get_position(), dir));
+      temp = world->getCell(w->adjacent(b->get_position(), dir));
       break;
     case default:
       break;
   }
   switch (this->condition.condition) {
     case Friend:
-      Bug *occupant = temp->get_occupant();
+      Bug *occupant = temp->getOccupant();
       if (occupant != NULL) {
         confirm = occupant->get_color().color == b->get_color().color;
       }
       break;
     case Foe:
-      Bug *occupant = temp->get_occupant();
+      Bug *occupant = temp->getOccupant();
       if (occupant != NULL) {
         confirm = occupant->get_color().color != b->get_color().color;
       }
       break;
     case FriendWithFood:
-      Bug *occupant = temp->get_occupant();
+      Bug *occupant = temp->getOccupant();
       if (occupant != NULL) {
         if (occupant->get_color().color == b->get_color().color){
           confirm = occupant->get_food();
@@ -75,7 +59,7 @@ void I_sense::execute(Bug *b){
       }
       break;
     case FoeWithFood:
-      Bug *occupant = temp->get_occupant();
+      Bug *occupant = temp->getOccupant();
       if (occupant != NULL) {
         if (occupant->get_color().color != b->get_color().color){
           confirm = occupant->get_food();
@@ -83,13 +67,13 @@ void I_sense::execute(Bug *b){
       }
       break;
     case Food:
-      confirm = temp->getFood() > 0;
+      confirm = (temp->getFood() > 0);
       break;
     case Rock:
       confirm = temp->getObstructed();
       break;
-    case Marker:
-      confirm = temp->mark->check_marker(mark_int, b->get_color().color);
+    case Marker_flag:
+      confirm = temp->mark->check_marker(tmark(mark_int), b->get_color().color);
       break;
     case FoeMarker:
       confirm = temp->mark->check_other_marker(b->get_color().color);

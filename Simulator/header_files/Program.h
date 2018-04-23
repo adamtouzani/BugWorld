@@ -9,7 +9,7 @@
 #include "Bug.h"
 
 
-class Program: public Bug{
+class Program{
   private:
     // attributes
     int id;

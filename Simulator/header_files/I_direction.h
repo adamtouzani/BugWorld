@@ -15,7 +15,7 @@ private:
   tstate y;
 public:
   I_direction(World*);
-  void execute(Bug *b);
+  void execute(Bug *);
   void parse(string args);
 
   void direction(tdirection dir, tstate dir_x, tstate dir_y);

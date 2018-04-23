@@ -14,8 +14,8 @@ class Instruction
         virtual void execute(Bug);
         virtual ~Instruction();
 
-    private:
-        World *w;
+    protected:
+        World *world;
 };
 
 #endif // INSTRUCTION_H

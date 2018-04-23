@@ -30,6 +30,7 @@ struct tleftright{
 
 struct tmark{
     int mark; //mark in [0,5]
+    tmark(int x):mark(x){};
 };
 
 struct tstate{

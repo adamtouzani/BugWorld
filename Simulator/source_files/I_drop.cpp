@@ -12,15 +12,15 @@ using namespace std;
 
 I_pickup::I_pickup(World *w) : Instruction(w){}
 
-void I_drop::execute(Bug& b){
-    tposition p = b.get_position();
-    Cell *x = this->w.get_cell(p);
-    x->set_food(x->get_food()+1);
-    b.set_food(false);
-    b.set_state(z);
+void I_drop::execute(Bug *b){
+    tposition p = b->get_position();
+    Cell *x = this->world->getCell(p);
+    x->setFood(x->getFood()+1);
+    b->set_food(false);
+    b->set_state(z);
 }
 
-void I_drop::parse(std::string& args){
+void I_drop::parse(std::string args){
 	std::vector<std::string> v;
 
     char * token;
@@ -32,6 +32,6 @@ void I_drop::parse(std::string& args){
         token= strtok (NULL, " ,.-");
     }
 
-    this->z.val = std::stoi (v[0],nullptr,10);
+    this->z.state = std::stoi (v[0],nullptr,10);
 
 }

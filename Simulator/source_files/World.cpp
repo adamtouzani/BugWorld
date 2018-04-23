@@ -2,6 +2,7 @@
  * File: World.cpp
  */
 
+#include <fstream>
 #include "World.h"
 
 World::World(){}
@@ -9,12 +10,11 @@ World::World(){}
 void World::load(std::string world_file){
 	std::ifstream wf;
 	std::string line;
-	wf.open(world_file, ios::in);
+    wf.open(world_file, std::ios::in);
 	if(wf.is_open()){
 	    wf >> width >> height;
 	} else {
-		error("File not found.\n");
-		exit(EXIT_FAILURE);
+		throw Exception("File not found!");
 	}
 
 	std::cout << "Width: " << width << std::endl;
@@ -36,20 +36,17 @@ void World::load(std::string world_file){
 		line.erase(std::remove(line.begin(), line.end(), ' '), line.end());
 		for (int d = 0; d < width; ++d) {
 			if(line[d] == '+'){
-				Bug *n_bug = (line[j][d]->getoccupant());
-				n_bug->set_position(d, j);
-				n_bug->set_color(1);
-				n_bug->set_has_food(false);
+				Bug *n_bug = new Bug(1, 1, 0);
+				n_bug->set_position(tposition(d, j));
+				n_bug->set_food(false);
 				redbugs.push_back(n_bug);
 				std::cout << "Red bug base found, Creating red bug" << std::endl;
-			}
-			if(line[d] == '-'){
-        Bug *n_bug = (line[j][d]->getoccupant());
-        n_bug->set_position(d, j);
-        n_bug->set_color(0);
-        n_bug->set_has_food(false);
+			} else if(line[d] == '-'){
+                Bug *n_bug = new Bug(0, 1, 0);
+                n_bug->set_position(tposition(d, j));
+                n_bug->set_food(false);
 				blackbugs.push_back(n_bug);
-				cout << "Black bug base found, Creating black bug" << std::endl;
+                std::cout << "Black bug base found, Creating black bug" << std::endl;
 			}
 		}
 	}
@@ -61,7 +58,7 @@ void World::executeCycle(){
   //To be implemented
 }
 
-Cell World::getCell(tposition pos){
+Cell* World::getCell(tposition pos){
     if(pos.posX > width || pos.posY > height){
         throw Exception("Out of bounds!");
     } else {

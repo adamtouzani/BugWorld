@@ -8,8 +8,6 @@ private:
   int bits[12];
 public:
   Marker();
-  ~Marker();
-
   void set_marker(tmark, tcolor);
   void clear_marker(tmark, tcolor);
   bool check_marker(tmark, tcolor);

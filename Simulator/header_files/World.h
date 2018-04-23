@@ -18,7 +18,7 @@ private:
     int width;
     int height;
     //All the Cells of the world, in 2D vector
-    std::vector< std::vector<Cell> > worldCells;
+    std::vector< std::vector<Cell*> > worldCells;
 
     std::vector<Bug *> redbugs;
     std::vector<Bug *> blackbugs;
@@ -27,7 +27,7 @@ public:
     ~World();
     void load(std::string filename);
     void executeCycle();
-    Cell getCell(tposition pos);
+    Cell* getCell(tposition pos);
     tposition adjacent(tposition pos, tdirection dir);
     tcolor otherColor(tcolor color);
     tcolor winner();

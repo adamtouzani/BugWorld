@@ -23,9 +23,9 @@ class I_unmark: public Instruction{
   public:
     //functions
     I_unmark(World*);
-    void execute(Bug b);
+    void execute(Bug *b);
     void parse(string args);
-    void unmark(int m, tsate z);
+    void unmark(int m, tstate z);
 };
 
 #endif

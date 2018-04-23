@@ -23,7 +23,7 @@ class I_flip: public Instruction{
 
     //functions
     int randomint(){
-      srand(time(NULL));
+      srand((unsigned int)time(NULL));
       return rand() % (p - 1);
     }
 

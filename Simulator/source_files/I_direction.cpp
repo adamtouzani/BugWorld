@@ -16,14 +16,14 @@
 
 I_direction::I_direction(World *w) : Instruction(w){}
 
-void I_direction::execute(Bug& b) {
-    if(b.get_direction().val == this->d.val)
-        b.set_state(this->x);
+void I_direction::execute(Bug *b) {
+    if(b->get_direction().direction == this->d.direction)
+        b->set_state(this->x);
     else
-        b.set_state(this->y);
+        b->set_state(this->y);
 }
 
-void I_direction::parse(std::string& args){
+void I_direction::parse(std::string args){
     std::vector<std::string> v;
 
     char * token;
@@ -36,7 +36,7 @@ void I_direction::parse(std::string& args){
         token= strtok (NULL, " ,.-");
     }
 
-    this->d.val = std::stoi (v[0],nullptr,10);
-    this->x.val = std::stoi(v[1],nullptr,10);
-    this->y.val = std::stoi (v[2]],nullptr,10);
+    this->d.direction = std::stoi (v[0],nullptr,10);
+    this->x.state = std::stoi(v[1],nullptr,10);
+    this->y.state = std::stoi (v[2],nullptr,10);
 }

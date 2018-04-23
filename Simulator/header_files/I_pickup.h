@@ -15,7 +15,7 @@ private:
   tstate y;
 public:
   I_pickup(World*);
-  void execute(Bug b);
+  void execute(Bug *b);
   void parse(std::string args);
   void pickup(tstate x, tstate y);
 };

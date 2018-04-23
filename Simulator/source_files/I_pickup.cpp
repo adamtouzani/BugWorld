@@ -1,7 +1,5 @@
-
-
-#include <cstdlib>
 #include <iostream>
+#include <cstdlib>
 
 #include "../header_files/Bug.h"
 #include "../header_files/World.h"
@@ -13,8 +11,8 @@ using namespace std;
 I_pickup::I_pickup(World *w) : Instruction(w){}
 
 void I_pickup::execute(Bug *b){
-  if (!b.get_food()) {
-    Cell *temp = w->getCell(b->get_position());
+  if (!b->get_food()) {
+    Cell *temp = world->getCell(b->get_position());
     int food = temp->getFood();
     if (food == 0) {
       b->set_state(this->y);

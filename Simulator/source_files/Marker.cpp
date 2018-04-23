@@ -6,13 +6,9 @@
 #include "../header_files/Marker.h"
 
 Marker::Marker() {
-	this->bits=0;
-}
-
-Marker::Marker(const Marker& orig) {
-}
-
-Marker::~Marker() {
+    for (int i = 0; i < 12; i++) {
+        bits[i] = 0;
+    }
 }
 
 void Marker::set_marker(tmark mark, tcolor col){

@@ -9,9 +9,5 @@
 using namespace std;
 
 Instruction::Instruction(World *w){
-  wrld = w;
+  world = w;
 }
-
-virtual void Instruction::execute(Bug b){};
-
-virtual void Instruction::parse(string args){};

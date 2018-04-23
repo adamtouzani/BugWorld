@@ -12,15 +12,15 @@ using namespace std;
 
 I_unmark::I_unmark(World *w) : Instruction(w){}
 
-void I_unmark::execute(Bug& b){
+void I_unmark::execute(Bug *b){
     //set mark m and go to state z
-    tposition p = b.get_position();
-    Cell *x = this->w.get_cell(p);
-    x->mark.clear_marker();
-    b.set_state(z);
+    tposition p = b->get_position();
+    Cell *x = this->world->getCell(p);
+    x->mark->clear_marker(tmark(m), b->get_color());
+    b->set_state(z);
 }
 
-void I_unmark::parse(std::string& args){
+void I_unmark::parse(std::string args){
     std::vector<std::string> v;
     char* token;
 
@@ -30,6 +30,6 @@ void I_unmark::parse(std::string& args){
         v.push_back(str);
         token= strtok (NULL, " ,.-");
     }
-    int m = std::stoi (v[0], nullptr, 10);
-    this->z.val = std::stoi (v[1], nullptr, 10);
+    this->m = std::stoi (v[0], nullptr, 10);
+    this->z.state = std::stoi (v[1], nullptr, 10);
 }

@@ -9,7 +9,7 @@
 
 class Bug{
 private:
-  tcolor color;
+  tcolor col;
   tstate state;
   int prog_id;
   tposition pos;

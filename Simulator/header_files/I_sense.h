@@ -18,7 +18,7 @@ private:
   int mark_int;
 public:
   I_sense(World*);
-  void execute(Bug b);
+  void execute(Bug *b);
   void parse(std::string args);
   void sense(tsensedir sensedir, tstate x, tstate y, tcondition c);
 };

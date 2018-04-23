@@ -3,9 +3,9 @@
  */
 
 #include "../header_files/Bug.h"
+#include "../header_files/Structs.h"
 
-Bug::Bug(tcolor i_col, int i_progid, int i_resting){
-  color = i_col;
+Bug::Bug(tcolor i_col, int i_progid, int i_resting) : col(i_col.color), pos(0,0){
   prog_id = i_progid;
   resting = i_resting;
 }
@@ -15,7 +15,7 @@ void Bug::start_resting(){
 }
 
 bool Bug::rested(){
-  bool rested;
+  bool rested = false;
   /* TODO: Implement rested */
   return rested;
 }
@@ -25,10 +25,10 @@ int Bug::get_progid(){
 }
 
 tcolor Bug::get_color(){
-  return color;
+  return col;
 }
 
-tsate Bug::get_state(){
+tstate Bug::get_state(){
   return state;
 }
 
